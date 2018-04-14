@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jasmine"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jasmine/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jasmine": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "no-var": 1,
+    "no-console": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  },
+  "globals": {
+    "document": true,
+    "process": true,
+    "window": true
+  }
+}
