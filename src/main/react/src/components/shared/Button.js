@@ -18,7 +18,6 @@ const Button = styled.button`
     }
     
     @media only screen and (max-width: 600px) {
-        color: red;
         margin: 1em;
         width: calc(100% - 2em);
     }
