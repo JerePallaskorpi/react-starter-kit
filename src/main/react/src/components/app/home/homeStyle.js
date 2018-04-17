@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const HomeContainer = styled.div`
     max-width: 800px;
     margin: auto;
     display: flex;
@@ -11,4 +11,9 @@ const Container = styled.div`
     }
 `;
 
-export default Container;
+export const Lorem = styled.p`
+    color: #090909;
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
+`;

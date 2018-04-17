@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import * as styles from '../../shared/styles';
 
 export const Container = styled.div`
     width: 100%;
-    -webkit-box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);-moz-box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
+    -webkit-box-shadow: ${styles.buttonShadow};
+    -moz-box-shadow: ${styles.buttonShadow};
+    box-shadow: ${styles.buttonShadow};
     position: absolute;
     bottom: 0;
     background: #4a4a4a;
@@ -12,8 +15,12 @@ export const Container = styled.div`
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
+    border-bottom: 0.5rem solid ${styles.colorMain}
+    line-height: 2em;
 `;
 
 export const FooterContent = styled.div`
     color: #ffffff;
+    display: flex;
+    align-items: center;
 `;

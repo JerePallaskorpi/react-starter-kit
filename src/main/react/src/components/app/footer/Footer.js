@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, FooterContent } from './FooterStyled';
+import { Container, FooterContent } from './footerStyle';
 
 class Footer extends Component {
 
@@ -7,9 +7,9 @@ class Footer extends Component {
 
         return (
             <Container>
-                <FooterContent>Important Links</FooterContent>
-                <FooterContent>More stuff</FooterContent>
-                <FooterContent>Etc.</FooterContent>
+                <FooterContent>Important Links<br />Important Links<br />Important Links<br /></FooterContent>
+                <FooterContent>More stuff Important Links<br /></FooterContent>
+                <FooterContent>Etc.<br />More stuff Important Links<br /></FooterContent>
             </Container>
         );
 
