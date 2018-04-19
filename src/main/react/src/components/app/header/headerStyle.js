@@ -45,5 +45,5 @@ export const OrangeBox = styled.div`
     left: 20px;
     background: orange;
     z-index: -1;
-    transform: rotate(-27deg)
+    transform: rotate(-27deg);
 `;

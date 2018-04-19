@@ -14,15 +14,28 @@
     "styled-components": "^3.2.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=src/ react-scripts start",
     "build": "react-scripts build",
     "test": "npm run karma -- --single-run=false",
     "karma": "node node_modules/karma/bin/karma start config/karma.conf.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-jasmine": "^2.9.3",
-    "eslint-plugin-react": "^7.7.0"
+    "babel-preset-airbnb": "^2.4.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.18.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.9",
+    "react-scripts": "1.0.17",
+    "sinon": "^4.1.5"
   }
 }

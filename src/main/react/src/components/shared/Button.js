@@ -15,10 +15,14 @@ const Button = styled.button`
     box-shadow: ${styles.buttonShadow};
     
     &:hover {
-      cursor: pointer;
-      -webkit-box-shadow: ${styles.buttonShadowHover}; 
-      -moz-box-shadow: ${styles.buttonShadowHover}; 
-      box-shadow: ${styles.buttonShadowHover};
+        cursor: pointer;
+        -webkit-box-shadow: ${styles.buttonShadowHover}; 
+        -moz-box-shadow: ${styles.buttonShadowHover}; 
+        box-shadow: ${styles.buttonShadowHover};
+    }
+    
+    &:focus {
+        outline: none;
     }
     
     @media only screen and (max-width: 600px) {

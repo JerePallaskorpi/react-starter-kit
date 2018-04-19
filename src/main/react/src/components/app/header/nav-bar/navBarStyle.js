@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as styles from 'components/shared/styles/defaultStyles';
 
 export const Container = styled.div`
     padding: 0 1em;
@@ -17,9 +18,10 @@ export const NavLinks = styled.ul`
 export const Link = styled.li`
     display: inline-block;
     margin: 0 1em;
+    border-bottom: 3px solid #ffffff;
     
     &:hover {
         cursor: pointer;
-        text-decoration: underline;
+        border-bottom: 3px solid ${styles.colorMain};
     }
 `;
