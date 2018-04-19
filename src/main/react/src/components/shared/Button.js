@@ -3,22 +3,25 @@ import * as styles from './styles/defaultStyles';
 
 const Button = styled.button`
 
-    color: ${props => props.color ? props.color : '#ffffff'};
-    background: ${props => props.primary ? styles.colorMain : styles.colorSecondary};
+    text-transform: uppercase;
+    font-weight: 700;
     border: 0;
     padding: 1em;
     transition: 0.3s;
     width: 100%;
     margin: 1em;
-    -webkit-box-shadow: ${styles.buttonShadow}; 
-    -moz-box-shadow: ${styles.buttonShadow}; 
-    box-shadow: ${styles.buttonShadow};
+    color: ${props => props.flat ? styles.colorMain : styles.colorFontLight};
+    background: ${props => props.flat ? 'none' : styles.colorMain};
+    -webkit-box-shadow: ${props => props.flat ? 'none' : styles.buttonShadow};
+    -moz-box-shadow: ${props => props.flat ? 'none' : styles.buttonShadow};
+    box-shadow: ${props => props.flat ? 'none' : styles.buttonShadow};
     
     &:hover {
         cursor: pointer;
-        -webkit-box-shadow: ${styles.buttonShadowHover}; 
-        -moz-box-shadow: ${styles.buttonShadowHover}; 
-        box-shadow: ${styles.buttonShadowHover};
+        -webkit-box-shadow: ${props => props.flat ? 'none' : styles.buttonShadowHover};
+        -moz-box-shadow: ${props => props.flat ? 'none' : styles.buttonShadowHover};
+        box-shadow: ${props => props.flat ? 'none' : styles.buttonShadowHover};
+        background: ${props => props.flat ? '#efefef' : styles.colorMainHighlight};
     }
     
     &:focus {

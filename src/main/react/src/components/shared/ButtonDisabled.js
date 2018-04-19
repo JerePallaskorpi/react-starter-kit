@@ -1,5 +1,4 @@
 import Button from './Button';
-import * as styles from './styles/defaultStyles';
 
 const ButtonDisabled = Button.extend`
 
@@ -7,9 +6,9 @@ const ButtonDisabled = Button.extend`
     
     &:hover {
       cursor: unset;
-      -webkit-box-shadow: ${styles.buttonShadow}; 
-      -moz-box-shadow: ${styles.buttonShadow}; 
-      box-shadow: ${styles.buttonShadow};
+      -webkit-box-shadow: 'none';
+      -moz-box-shadow: 'none';
+      box-shadow: 'none';
       opacity: 0.5;
     }
     

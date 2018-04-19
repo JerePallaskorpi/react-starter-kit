@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'components/shared/Button';
 import Footer from 'components/app/footer/Footer';
-import ButtonDisabled from 'components/shared/ButtonDisabled';
 import Header from 'components/app/header/Header';
 import { HomeContainer, Lorem } from './homeStyle';
 
@@ -22,9 +21,8 @@ class Home extends Component {
                     officia perspiciatis quas quod, recusandae repellat sint soluta tempore veniam voluptatibus. Alias atque aut
                     doloribus ducimus pariatur sit tempore. Fugiat, provident.</Lorem>
                 <HomeContainer>
-                    <Button primary>test</Button>
-                    <Button color={'black'}>test</Button>
-                    <ButtonDisabled disabled>test</ButtonDisabled>
+                    <Button>Raised button</Button>
+                    <Button flat>Flat button</Button>
                 </HomeContainer>
                 <Footer />
             </div>
