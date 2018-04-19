@@ -1,5 +1,5 @@
 import Button from './Button';
-import * as styles from './styles';
+import * as styles from './styles/defaultStyles';
 
 const ButtonDisabled = Button.extend`
 
