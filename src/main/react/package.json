@@ -16,7 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "npm run karma -- --single-run=false",
+    "karma": "node node_modules/karma/bin/karma start config/karma.conf.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
