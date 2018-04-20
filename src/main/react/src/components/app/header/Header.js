@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './nav-bar/NavBar';
-import { Container, Heading, IconLogo, OrangeBox } from './headerStyle';
+import { Container, Heading, IconLogo, OrangeBox } from './headerStyles';
 
 const Header = () => (
     <div>

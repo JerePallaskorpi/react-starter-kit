@@ -1,4 +1,4 @@
-import * as styles from '../../shared/styles/defaultStyles';
+import * as styles from '../../../utils/defaultStyles';
 import styled from 'styled-components';
 
 export const Container = styled.div`

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from 'components/shared/Button';
 import Footer from 'components/app/footer/Footer';
 import Header from 'components/app/header/Header';
-import { HomeContainer, Lorem } from './homeStyle';
+import { HomeContainer, Lorem } from './homeStyles';
 
 class Home extends Component {
 
