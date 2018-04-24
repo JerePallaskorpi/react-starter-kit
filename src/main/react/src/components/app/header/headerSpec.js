@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { Container, Heading, IconLogo, OrangeBox } from '../../../components/app/header/headerStyles';
-import Header from '../../../components/app/header/Header';
+import { Container, Heading, IconLogo, OrangeBox } from './headerStyles';
+import Header from './Header';
 
 describe('<Header />', () => {
 

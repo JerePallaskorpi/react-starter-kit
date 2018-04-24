@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import NavBar from '../../../../components/app/header/nav-bar/NavBar';
-import { Container, Link, NavLinks } from '../../../../components/app/header/nav-bar/navBarStyles';
+import NavBar from './NavBar';
+import { Container, Link, NavLinks } from './NavBarStyles';
 
 describe('<NavBar />', () => {
 

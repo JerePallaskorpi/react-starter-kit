@@ -1,8 +1,8 @@
-var path = require('path');
-var testHelperPath = path.resolve('src/test/testHelper.js');
+const path = require('path');
+const testHelperPath = path.resolve('config/testHelper.js');
 
-process.env.BABEL_ENV = 'test';
-process.env.NODE_ENV = 'test';
+process.env.BABEL_ENV = 'components';
+process.env.NODE_ENV = 'components';
 
 module.exports = function (config) {
     config.set({
