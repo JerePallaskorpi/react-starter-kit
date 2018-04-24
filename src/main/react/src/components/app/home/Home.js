@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Button from 'components/shared/Button';
-import Footer from 'components/app/footer/Footer';
-import Header from 'components/app/header/Header';
 import { HomeContainer, Lorem } from './homeStyles';
+import Header from '../header/Header';
+import Button from '../../shared/Button';
+import Footer from '../footer/Footer';
 
 class Home extends Component {
 
