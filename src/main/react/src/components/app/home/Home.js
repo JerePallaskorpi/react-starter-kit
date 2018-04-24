@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
 
         return (
-            <div>
+            <React.Fragment>
                 <Header />
                 <Lorem>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium
                     asperiores
@@ -25,7 +25,7 @@ class Home extends Component {
                     <Button flat>Flat button</Button>
                 </HomeContainer>
                 <Footer />
-            </div>
+            </React.Fragment>
         );
 
     }

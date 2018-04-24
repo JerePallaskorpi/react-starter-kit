@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as styles from '../../../utils/defaultStyles';
 
 export const HomeContainer = styled.div`
     max-width: 800px;
@@ -6,14 +7,14 @@ export const HomeContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         display: unset;
     }
 `;
 
 export const Lorem = styled.p`
-    color: #090909;
-    padding: 1em;
+    color: ${styles.colorFontDark};
+    padding: ${styles.paddingDefault};
     max-width: 800px;
     margin: auto;
 `;

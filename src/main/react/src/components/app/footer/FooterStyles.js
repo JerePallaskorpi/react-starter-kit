@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import * as styles from '../../../utils/defaultStyles';
 
-export const Container = styled.div`
+export const FooterContainer = styled.div`
     width: 100%;
-    -webkit-box-shadow: ${styles.buttonShadow};
-    -moz-box-shadow: ${styles.buttonShadow};
-    box-shadow: ${styles.buttonShadow};
+    -webkit-box-shadow: ${styles.shadowButton};
+    -moz-box-shadow: ${styles.shadowButton};
+    box-shadow: ${styles.shadowButton};
     position: absolute;
     bottom: 0;
     background: #4a4a4a;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as styles from 'utils/defaultStyles';
+import * as styles from '../../../../utils/defaultStyles';
 
 export const Container = styled.div`
     padding: 0 1em;
@@ -18,7 +18,7 @@ export const NavLinks = styled.ul`
 export const Link = styled.li`
     display: inline-block;
     margin: 0 1em;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid ${styles.colorBackgroundWhite};
     
     &:hover {
         cursor: pointer;

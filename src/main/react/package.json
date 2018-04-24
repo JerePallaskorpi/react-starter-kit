@@ -14,8 +14,8 @@
     "styled-components": "^3.2.5"
   },
   "scripts": {
-    "start": "cross-env NODE_PATH=src/ react-scripts start",
-    "build": "cross-env NODE_PATH=src/ react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "npm run karma -- --single-run=false",
     "karma": "node node_modules/karma/bin/karma start config/karma.conf.js",
     "eject": "react-scripts eject"
@@ -25,7 +25,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
-    "cross-env": "^5.1.4",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.0",
