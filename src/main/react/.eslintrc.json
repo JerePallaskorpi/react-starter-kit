@@ -1,14 +1,37 @@
 {
-  "parser": "babel-eslint",
   "plugins": [
     "react",
-    "jasmine"
+    "jasmine",
+    "chai-friendly"
   ],
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
+    "airbnb",
     "plugin:jasmine/recommended"
   ],
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "indent": [
+      "error",
+      4
+    ],
+    "linebreak-style": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  },
   "env": {
     "browser": true,
     "commonjs": true,
@@ -20,21 +43,7 @@
       "modules": true
     }
   },
-  "rules": {
-    "no-var": 1,
-    "no-console": "off",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
-  },
   "globals": {
-    "document": true,
-    "process": true,
-    "window": true
+    "expect": true
   }
 }

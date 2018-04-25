@@ -6,8 +6,7 @@ import NavBar from './NavBar';
 import { Container, Link, NavLinks } from './NavBarStyles';
 
 describe('<NavBar />', () => {
-
-    let wrapper = shallow(<NavBar />);
+    const wrapper = shallow(<NavBar />);
 
     it('renders <NavBar />', () => {
         expect(wrapper.exists()).to.be.true;
@@ -24,5 +23,4 @@ describe('<NavBar />', () => {
     it('should render one (3) Link', () => {
         expect(wrapper.find(Link)).to.have.length(3);
     });
-
 });

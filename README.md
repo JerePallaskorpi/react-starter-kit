@@ -1,6 +1,10 @@
 ## React Starter Kit
 This project is a modified version of create-react-app that includes styled-components, unit tests and a modified folder structure.
 
+### ESLint Settings
+Follows Airbnb JavaScript style guide
+https://github.com/airbnb/javascript
+
 ### Folder Structure
 components/\
 ├── app/\

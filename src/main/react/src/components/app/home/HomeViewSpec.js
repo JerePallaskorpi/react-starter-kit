@@ -6,8 +6,10 @@ import { HomeContainer, Lorem } from './HomeStyles';
 import HomeView from './HomeView';
 
 describe('<HomeView />', () => {
-
-    let wrapper = shallow(<HomeView />);
+    const wrapper = shallow(<HomeView
+        handleClickRaisedButton={() => {
+        }}
+    />);
 
     it('renders <HomeView />', () => {
         expect(wrapper.exists()).to.be.true;
@@ -20,5 +22,4 @@ describe('<HomeView />', () => {
     it('should render HomeContainer', () => {
         expect(wrapper.find(HomeContainer)).to.have.length(1);
     });
-
 });

@@ -1,13 +1,12 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-
-import { Container, Heading, IconLogo, OrangeBox } from './headerStyles';
 import Header from './Header';
 
-describe('<Header />', () => {
+import { Container, Heading, IconLogo, OrangeBox } from './HeaderStyles';
 
-    let wrapper = shallow(<Header />);
+describe('<Header />', () => {
+    const wrapper = shallow(<Header />);
 
     it('renders <Header />', () => {
         expect(wrapper.exists()).to.be.true;
@@ -28,5 +27,4 @@ describe('<Header />', () => {
     it('should render Heading', () => {
         expect(wrapper.find(Heading)).to.have.length(1);
     });
-
 });

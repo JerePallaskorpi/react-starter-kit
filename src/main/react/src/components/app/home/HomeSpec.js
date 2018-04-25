@@ -4,8 +4,7 @@ import React from 'react';
 import Home from './Home';
 
 describe('<Home />', () => {
-
-    let wrapper = shallow(<Home />);
+    const wrapper = shallow(<Home />);
 
     it('renders <Home />', () => {
         expect(wrapper.exists()).to.be.true;
@@ -14,5 +13,4 @@ describe('<Home />', () => {
     it('should invoke handleClickRaisedButton without errors', () => {
         wrapper.instance().handleClickRaisedButton();
     });
-
 });

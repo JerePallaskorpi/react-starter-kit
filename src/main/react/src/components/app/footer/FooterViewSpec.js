@@ -5,8 +5,7 @@ import { FooterContainer, FooterContent } from './FooterStyles';
 import FooterView from './FooterView';
 
 describe('<FooterView />', () => {
-
-    let wrapper = shallow(<FooterView />);
+    const wrapper = shallow(<FooterView test="test" />);
 
     it('renders <FooterView />', () => {
         expect(wrapper.exists()).to.be.true;
@@ -19,5 +18,4 @@ describe('<FooterView />', () => {
     it('should render Container', () => {
         expect(wrapper.find(FooterContent)).to.have.length(3);
     });
-
 });
