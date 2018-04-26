@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import HomeView from './HomeView';
 
@@ -9,7 +10,11 @@ class Home extends Component {
     }
 
     handleClickRaisedButton() {
-        alert('clicked');
+        function square(n: 2) {
+            return n * n;
+        }
+
+        square(2);
     }
 
     render() {

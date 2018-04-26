@@ -2,11 +2,13 @@
   "plugins": [
     "react",
     "jasmine",
-    "chai-friendly"
+    "chai-friendly",
+    "flowtype"
   ],
   "extends": [
     "airbnb",
-    "plugin:jasmine/recommended"
+    "plugin:jasmine/recommended",
+    "plugin:flowtype/recommended"
   ],
   "rules": {
     "func-names": [
