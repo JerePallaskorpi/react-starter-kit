@@ -3,7 +3,7 @@ import React from 'react';
 import { FooterContainer, FooterContent } from './FooterStyles';
 
 type types = {
-    test: 'asd' | 'hmm',
+    test: string,
     values: {
         linkText: string
     }

@@ -14,13 +14,13 @@ const App = () => (
 
 );
 
-injectGlobal`
+injectGlobal([`
   body {
     margin: 0;
     font-family: 'Lato', Arial, sans-serif;
     font-size: 16px;
     background: ${styles.colorBackgroundLightGray};
   }
-`;
+`]);
 
 export default App;

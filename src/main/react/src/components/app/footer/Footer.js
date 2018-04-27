@@ -1,9 +1,10 @@
+// @flow
 import React from 'react';
 import FooterView from './FooterView';
 
 function Footer() {
     return (
-        <FooterView test="test string" values={{ linkText: 'linktest' }} />
+        <FooterView test="asds" values={{ linkText: 'linktest' }} />
     );
 }
 
