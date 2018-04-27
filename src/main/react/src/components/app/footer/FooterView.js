@@ -1,37 +1,26 @@
-import PropTypes from 'prop-types';
+// @flow
 import React from 'react';
 import { FooterContainer, FooterContent } from './FooterStyles';
 
-const propTypes = {
-    test: PropTypes.string.isRequired,
-    values: PropTypes.shape({
-        linkText: PropTypes.string,
-    }),
-};
-
-const defaultProps = {
+type types = {
+    test: 'asd' | 'hmm',
     values: {
-        linkText: 'Linkki',
-    },
+        linkText: string
+    }
 };
 
-function FooterView({ test, values }) {
-    return (
-        <FooterContainer>
-            <FooterContent>Important Links<br />Important Links<br />Important
-                Links<br />
-            </FooterContent>
-            <FooterContent>More stuff Important
-                Links<br />{test}<br />{values.linkText}
-            </FooterContent>
-            <FooterContent>Etc.<br />More stuff Important
-                Links<br />
-            </FooterContent>
-        </FooterContainer>
-    );
-}
-
-FooterView.propTypes = propTypes;
-FooterView.defaultProps = defaultProps;
+const FooterView = ({ test, values }: types) => (
+    <FooterContainer>
+        <FooterContent>Important Links<br />Important Links<br />Important
+            Links<br />
+        </FooterContent>
+        <FooterContent>More stuff Important
+            Links<br />{test}<br />{values.linkText}
+        </FooterContent>
+        <FooterContent>Etc.<br />More stuff Important
+            Links<br />
+        </FooterContent>
+    </FooterContainer>
+);
 
 export default FooterView;

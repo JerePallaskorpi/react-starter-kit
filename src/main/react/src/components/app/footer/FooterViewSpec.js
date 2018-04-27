@@ -5,7 +5,15 @@ import { FooterContainer, FooterContent } from './FooterStyles';
 import FooterView from './FooterView';
 
 describe('<FooterView />', () => {
-    const wrapper = shallow(<FooterView test="test" />);
+
+    const minProps = {
+        test: '',
+        values: {
+            linkText: '',
+        },
+    };
+
+    const wrapper = shallow(<FooterView {...minProps} />);
 
     it('renders <FooterView />', () => {
         expect(wrapper.exists()).to.be.true;

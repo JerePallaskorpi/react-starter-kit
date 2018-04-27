@@ -6,10 +6,18 @@ import { HomeContainer, Lorem } from './HomeStyles';
 import HomeView from './HomeView';
 
 describe('<HomeView />', () => {
-    const wrapper = shallow(<HomeView
-        handleClickRaisedButton={() => {
-        }}
-    />);
+
+    const minProps = {
+        handleClickRaisedButton: () => {
+        },
+        handleClickFlatButton: () => {
+        },
+        values: {
+            test: '',
+        },
+    };
+
+    const wrapper = shallow(<HomeView {...minProps} />);
 
     it('renders <HomeView />', () => {
         expect(wrapper.exists()).to.be.true;

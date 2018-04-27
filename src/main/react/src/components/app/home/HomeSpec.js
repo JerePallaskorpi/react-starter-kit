@@ -13,4 +13,8 @@ describe('<Home />', () => {
     it('should invoke handleClickRaisedButton without errors', () => {
         wrapper.instance().handleClickRaisedButton();
     });
+
+    it('should invoke handleClickFlatButton without errors', () => {
+        wrapper.instance().handleClickFlatButton();
+    });
 });
