@@ -58,7 +58,7 @@ module.exports = function (config) {
                         exclude: /node_modules/,
                         loader: 'babel-loader',
                         query: {
-                            presets: ['env', 'react', 'airbnb'],
+                            presets: ['env', 'react', 'airbnb', 'es2015', 'stage-0'],
                         },
                     },
                     {
