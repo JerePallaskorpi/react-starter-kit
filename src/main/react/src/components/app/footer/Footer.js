@@ -4,7 +4,7 @@ import FooterView from './FooterView';
 
 function Footer() {
     return (
-        <FooterView test="asds" values={{ linkText: 'linktest' }} />
+        <FooterView test="test test" values={{ linkText: 'linktest' }} />
     );
 }
 

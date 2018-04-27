@@ -1,28 +1,32 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 import Home from './Home';
 
 describe('<Home />', () => {
+    const initialState = {
+        test: 'test string',
+    };
+
     const wrapper = shallow(<Home />);
 
     it('renders <Home />', () => {
         expect(wrapper.exists()).to.be.true;
     });
 
-    it('should do something when button clikcd', () => {
-        const handleClickRaisedButton = sinon.spy();
-        wrapper.find('Button').simulate('click');
+    it('should add correct value to state when handleClickRaisedButton invoked ', () => {
+        const newValue = `${initialState.test} ${initialState.test}`;
 
-        expect(handleClickRaisedButton).to.have.property('callCount', 1);
-    });
+        expect(wrapper.state('test')).to.equal(initialState.test);
 
-    it('should invoke handleClickRaisedButton without errors', () => {
         wrapper.instance().handleClickRaisedButton();
+
+        expect(wrapper.state('test')).to.equal(newValue);
     });
 
-    it('should invoke handleClickFlatButton without errors', () => {
+    it('should reset test state to initial value when handleClickFlatButton invoked', () => {
         wrapper.instance().handleClickFlatButton();
+
+        expect(wrapper.state('test')).to.equal(initialState.test);
     });
 });
