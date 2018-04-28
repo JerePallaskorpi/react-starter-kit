@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import * as styles from '../../../utils/defaultStyles';
+import * as styles from '../../ui/defaultStyles';
 
 export const Container = styled.div`
     width: 100%;
-    -webkit-box-shadow: ${styles.shadowButton}; 
-    -moz-box-shadow: ${styles.shadowButton}; 
-    box-shadow: ${styles.shadowButton};
+    -webkit-box-shadow: ${styles.shadowDefault}; 
+    -moz-box-shadow: ${styles.shadowDefault}; 
+    box-shadow: ${styles.shadowDefault};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,6 @@ export const Container = styled.div`
     border-top: 0.25rem solid ${styles.colorMain};
     z-index: 1;
     background: ${styles.colorBackgroundWhite};
-    margin-bottom: 2em;
     max-height: 75px;
     
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
-import * as styles from '../../utils/defaultStyles';
+import * as styles from '../ui/defaultStyles';
 import Home from './home/Home';
 
 const App = () => (
@@ -14,13 +14,20 @@ const App = () => (
 
 );
 
-injectGlobal([`
+injectGlobal`
   body {
     margin: 0;
     font-family: 'Lato', Arial, sans-serif;
     font-size: 16px;
     background: ${styles.colorBackgroundLightGray};
+    
+    input, select, textarea, button {
+        font-family: inherit;
+    }
+    
+    *::-moz-selection { background: ${styles.colorMain}; }
+    *::selection { background: ${styles.colorMain}; }
   }
-`]);
+`;
 
 export default App;

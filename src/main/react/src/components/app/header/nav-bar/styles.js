@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import * as styles from '../../../../utils/defaultStyles';
+import * as styles from '../../../ui/defaultStyles';
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
     padding: 0 1em;
     
     @media only screen and (max-width: 600px) {
@@ -13,12 +13,12 @@ export const NavLinks = styled.ul`
     list-style: none;
     font-size: 1.25em;
     margin: 0;
+    display: flex;
 `;
 
 export const Link = styled.li`
-    display: inline-block;
-    margin: 0 1em;
     border-bottom: 3px solid ${styles.colorBackgroundWhite};
+    margin: 0 16px;
     
     &:hover {
         cursor: pointer;

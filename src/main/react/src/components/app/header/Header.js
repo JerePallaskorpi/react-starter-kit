@@ -1,7 +1,7 @@
 // @flow
 import React, { Fragment } from 'react';
-import { Container, Heading, IconLogo, OrangeBox } from './HeaderStyles';
 import NavBar from './nav-bar/NavBar';
+import { Container, Heading, IconLogo, OrangeBox } from './styles';
 
 function Header() {
     return (

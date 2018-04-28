@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import Header from './Header';
 
-import { Container, Heading, IconLogo, OrangeBox } from './HeaderStyles';
+import { Container, Heading, IconLogo, OrangeBox } from './styles';
 
 describe('<Header />', () => {
     const wrapper = shallow(<Header />);

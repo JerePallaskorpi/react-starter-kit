@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Link, NavLinks } from './NavBarStyles';
+import { Link, NavLinks, Wrapper } from './styles';
 
 const NavBar = () => (
-    <Container>
+    <Wrapper>
         <NavLinks>
             <Link href="/">test</Link>
             <Link href="/">test</Link>
             <Link href="/">test</Link>
         </NavLinks>
-    </Container>
+    </Wrapper>
 );
 
 export default NavBar;

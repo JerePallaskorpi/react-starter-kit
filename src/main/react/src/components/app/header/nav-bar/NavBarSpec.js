@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 
 import NavBar from './NavBar';
-import { Container, Link, NavLinks } from './NavBarStyles';
+import { Link, NavLinks, Wrapper } from './styles';
 
 describe('<NavBar />', () => {
     const wrapper = shallow(<NavBar />);
@@ -12,8 +12,8 @@ describe('<NavBar />', () => {
         expect(wrapper.exists()).to.be.true;
     });
 
-    it('should render one (1) Container', () => {
-        expect(wrapper.find(Container)).to.have.length(1);
+    it('should render one (1) Wrapper', () => {
+        expect(wrapper.find(Wrapper)).to.have.length(1);
     });
 
     it('should render one (1) NavLinks', () => {

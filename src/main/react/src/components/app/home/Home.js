@@ -20,12 +20,14 @@ class Home extends Component<void, State> {
         this.handleClickFlatButton = this.handleClickFlatButton.bind(this);
     }
 
-    handleClickFlatButton = () => {
-        this.setState({ test: initialState.test });
+    handleClickRaisedButton = () => {
+        const { test } = this.state;
+
+        this.setState({ test: `${test} ${test}` });
     };
 
-    handleClickRaisedButton = () => {
-        this.setState({ test: `${this.state.test} ${this.state.test}` });
+    handleClickFlatButton = () => {
+        this.setState({ test: initialState.test });
     };
 
     render() {
