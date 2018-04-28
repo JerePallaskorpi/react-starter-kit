@@ -1,20 +1,28 @@
 import styled from 'styled-components';
+import * as styles from '../../defaultStyles';
 
+import Content from './Content';
 import Header from './Header';
 import Image from './Image';
 import Text from './Text';
 import Title from './Title';
 
-const CardTest = styled.div`
+const Card = styled.div`
     background: #FFFFFF;
-    padding: 16px;
-    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.4);
+    padding: ${styles.paddingDefault};
+    -webkit-box-shadow: ${styles.shadowLight};
+    -moz-box-shadow: ${styles.shadowLight};
+    box-shadow: ${styles.shadowLight};
     position: relative;
+    height: 350px;
+    width: 250px;
+    border-radius: 5px;
 `;
 
-CardTest.Header = Header;
-CardTest.Image = Image;
-CardTest.Text = Text;
-CardTest.Title = Title;
+Card.Header = Header;
+Card.Image = Image;
+Card.Text = Text;
+Card.Title = Title;
+Card.Content = Content;
 
-export default CardTest;
+export default Card;
