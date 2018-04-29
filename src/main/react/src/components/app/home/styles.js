@@ -26,7 +26,7 @@ export const ButtonWrapper = styled.div`
     }
     
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         
         h1 {
             display: none;
@@ -38,4 +38,9 @@ export const CardWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+`;
+
+export const TextWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
 `;

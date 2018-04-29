@@ -7,7 +7,7 @@ import P from '../../ui/elements/P';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import CardView from './cards/CardView';
-import { ButtonWrapper, CardWrapper, HomeContainer } from './styles';
+import { ButtonWrapper, CardWrapper, HomeContainer, TextWrapper } from './styles';
 
 type Props = {
     handleClickRaisedButton: Event => void,
@@ -32,17 +32,15 @@ const HomeView = ({
             <H1 centered>Styled Elements</H1>
             <Box>
                 <ButtonWrapper>
-                    <H1 secondary>Enabled</H1>
-                    <Button flat onClick={handleClickFlatButton}>Reset</Button>
                     <Button onClick={handleClickRaisedButton}>Add</Button>
-                </ButtonWrapper>
-                <ButtonWrapper>
-                    <H1 secondary>Disabled</H1>
-                    <Button flat disabled>Flat</Button>
+                    <Button flat onClick={handleClickFlatButton}>Reset</Button>
                     <Button disabled>Raised</Button>
+                    <Button flat disabled>Flat</Button>
                 </ButtonWrapper>
-                <P>{values.test}</P>
-                <P secondary>{values.test}</P>
+                <TextWrapper>
+                    <P>{values.test}</P>
+                    <P secondary>{values.test}</P>
+                </TextWrapper>
             </Box>
             <H1 centered>Styled Blocks</H1>
             <Button onClick={toggleModal}>Toggle Modal</Button>
