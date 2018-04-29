@@ -48,7 +48,7 @@ const HomeView = ({
             <Button onClick={toggleModal}>Toggle Modal</Button>
             <CardWrapper>
                 {values.cards.map(c => (
-                    <CardView key={c.title} title={c.title} text={c.text} />
+                    <CardView key={c.id} {...c} />
                 ))}
             </CardWrapper>
         </HomeContainer>

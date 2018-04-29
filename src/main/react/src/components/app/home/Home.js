@@ -13,10 +13,19 @@ const initialState = {
     modalOpen: false,
     cards: [
         {
+            id: 0,
             title: 'Card',
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            imageColor: 'papayawhip',
         },
         {
+            id: 1,
+            title: 'Block',
+            text: 'Amet aspernatur laborum non provident voluptate voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur laborum non provident voluptate voluptatibus!',
+            imageColor: 'tomato',
+        },
+        {
+            id: 2,
             title: 'Block',
             text: 'Amet aspernatur laborum non provident voluptate voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur laborum non provident voluptate voluptatibus!',
         },
@@ -32,6 +41,7 @@ class Home extends Component<void, State> {
         this.handleClickRaisedButton = this.handleClickRaisedButton.bind(this);
         this.handleClickFlatButton = this.handleClickFlatButton.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
+        this.handleModalSubmit = this.handleModalSubmit.bind(this);
     }
 
     handleClickRaisedButton = () => {
@@ -48,6 +58,12 @@ class Home extends Component<void, State> {
         this.setState({ modalOpen: !this.state.modalOpen });
     };
 
+    handleModalSubmit = () => {
+        const { cards } = this.state;
+
+        this.setState({ cards: [...cards, { ...cards[0], id: cards.length + 1 }] });
+    };
+
     render() {
         const { modalOpen } = this.state;
 
@@ -59,7 +75,13 @@ class Home extends Component<void, State> {
                     toggleModal={this.toggleModal}
                     values={this.state}
                 />
-                <Modal modalOpen={modalOpen} title="Modal title" text="Modal text lorem ipsum etc etc" />
+                <Modal
+                    modalOpen={modalOpen}
+                    title="Modal title"
+                    text="Modal text lorem ipsum etc etc"
+                    handleModalSubmit={this.handleModalSubmit}
+                    submitText={'Add Card'}
+                />
             </React.Fragment>
         );
     }

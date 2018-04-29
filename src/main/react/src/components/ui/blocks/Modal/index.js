@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import * as styles from '../../defaultStyles';
+import Blur from './Blur';
 import Content from './Content';
 import Footer from './Footer';
 import Header from './Header';
@@ -32,5 +33,6 @@ const Modal = styled.div`
 Modal.Content = Content;
 Modal.Header = Header;
 Modal.Footer = Footer;
+Modal.Blur = Blur;
 
 export default Modal;

@@ -10,21 +10,43 @@ type Props = {
     text: string,
     modalOpen: boolean,
     toggleModal: Event => void,
+    handleModalSubmit: Event => void,
+    submitText?: string,
+    cancelText?: string,
 };
 
-const ModalView = ({ title, text, modalOpen, toggleModal }: Props) => (
+const defaultProps = {
+    submitText: 'Submit',
+    cancelText: 'Cancel',
+};
+
+const ModalView = ({
+    title,
+    text,
+    modalOpen,
+    toggleModal,
+    handleModalSubmit,
+    submitText,
+    cancelText,
+}: Props) => (
     <Modal modalOpen={modalOpen}>
+        <Modal.Blur />
         <Modal.Header>
             <H1 secondary>{title}</H1>
+            <button onClick={toggleModal}>
+                <i className="fas fa-times" />
+            </button>
         </Modal.Header>
         <Modal.Content>
             <P>{text}</P>
         </Modal.Content>
         <Modal.Footer>
-            <Button onClick={toggleModal}>Click</Button>
-            <Button flat onClick={toggleModal}>Cancel</Button>
+            <Button onClick={handleModalSubmit}>{submitText}</Button>
+            <Button flat onClick={toggleModal}>{cancelText}</Button>
         </Modal.Footer>
     </Modal>
 );
+
+ModalView.defaultProps = defaultProps;
 
 export default ModalView;

@@ -6,6 +6,9 @@ type State = {
     title: string,
     text: string,
     modalOpen: boolean,
+    handleModalSubmit: Event => void,
+    submitText?: string,
+    cancelText?: string,
 };
 
 class Modal extends Component<void, State> {
@@ -17,6 +20,7 @@ class Modal extends Component<void, State> {
         };
 
         this.toggleModal = this.toggleModal.bind(this);
+        this.handleModalSubmit = this.handleModalSubmit.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -29,8 +33,19 @@ class Modal extends Component<void, State> {
         this.setState({ modalOpen: !this.state.modalOpen });
     };
 
+    handleModalSubmit = () => {
+        this.toggleModal();
+        this.state.handleModalSubmit();
+    };
+
     render() {
-        const { title, text, modalOpen } = this.state;
+        const {
+            title,
+            text,
+            modalOpen,
+            submitText,
+            cancelText,
+        } = this.state;
 
         return (
             <ModalView
@@ -38,6 +53,9 @@ class Modal extends Component<void, State> {
                 text={text}
                 modalOpen={modalOpen}
                 toggleModal={this.toggleModal}
+                handleModalSubmit={this.handleModalSubmit}
+                submitText={submitText}
+                cancelText={cancelText}
             />
         );
     }
