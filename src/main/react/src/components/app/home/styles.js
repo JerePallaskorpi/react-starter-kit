@@ -33,3 +33,9 @@ export const ButtonWrapper = styled.div`
         }
     }
 `;
+
+export const CardWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+`;

@@ -13,7 +13,14 @@ describe('<HomeView />', () => {
         handleClickFlatButton: () => {
         },
         values: {
-            test: '',
+            test: 'test text',
+            modalOpen: false,
+            cards: [
+                {
+                    title: 'card title',
+                    text: 'card text',
+                },
+            ],
         },
     };
 
@@ -35,7 +42,7 @@ describe('<HomeView />', () => {
         expect(wrapper.find(ButtonWrapper)).to.have.length(2);
     });
 
-    it('should render four (4) <Button />', () => {
-        expect(wrapper.find(Button)).to.have.length(4);
+    it('should render four (5) <Button />', () => {
+        expect(wrapper.find(Button)).to.have.length(5);
     });
 });

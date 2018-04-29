@@ -10,6 +10,7 @@ import Title from './Title';
 const Card = styled.div`
     background: #FFFFFF;
     padding: ${styles.paddingDefault};
+    margin: ${styles.paddingDefault};
     -webkit-box-shadow: ${styles.shadowLight};
     -moz-box-shadow: ${styles.shadowLight};
     box-shadow: ${styles.shadowLight};
