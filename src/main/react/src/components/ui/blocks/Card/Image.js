@@ -7,7 +7,7 @@ const Image = styled.div`
     position: absolute;
     top: calc(30% - 30px);
     left: 16px;
-    background: ${styles.colorBackgroundDark};
+    background: ${props => (props.imageColor ? props.imageColor : styles.colorBackgroundDark)} ;
     border-radius: 50%;
     -webkit-box-shadow: ${styles.shadowLight};
     -moz-box-shadow: ${styles.shadowLight};
