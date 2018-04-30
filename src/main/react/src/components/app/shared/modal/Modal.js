@@ -6,12 +6,21 @@ type State = {
     title: string,
     text: string,
     modalOpen: boolean,
+    handleModalSubmit: (arg: any) => void,
+    submitText?: string,
+    cancelText?: string,
+};
+
+type Props = {
+    title: string,
+    text: string,
+    modalOpen: boolean,
     handleModalSubmit: Event => void,
     submitText?: string,
     cancelText?: string,
 };
 
-class Modal extends Component<void, State> {
+class Modal extends Component<Props, State> {
     constructor(props: any) {
         super(props);
 
@@ -20,10 +29,10 @@ class Modal extends Component<void, State> {
         };
 
         this.toggleModal = this.toggleModal.bind(this);
-        this.handleModalSubmit = this.handleModalSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps: any) {
         if (this.props.modalOpen !== prevProps.modalOpen) {
             this.toggleModal();
         }
@@ -33,7 +42,7 @@ class Modal extends Component<void, State> {
         this.setState({ modalOpen: !this.state.modalOpen });
     };
 
-    handleModalSubmit = () => {
+    handleSubmit = () => {
         this.toggleModal();
         this.state.handleModalSubmit();
     };
@@ -53,7 +62,7 @@ class Modal extends Component<void, State> {
                 text={text}
                 modalOpen={modalOpen}
                 toggleModal={this.toggleModal}
-                handleModalSubmit={this.handleModalSubmit}
+                handleModalSubmit={this.handleSubmit}
                 submitText={submitText}
                 cancelText={cancelText}
             />
