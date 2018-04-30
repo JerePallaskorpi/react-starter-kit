@@ -9,6 +9,8 @@ import Header from '../header/Header';
 import CardView from './cards/CardView';
 import { ButtonWrapper, CardWrapper, HomeContainer, TextWrapper } from './styles';
 
+type Cards = {id: number, title: string, text: string, imageColor?: string};
+
 type Props = {
     handleClickRaisedButton: Event => void,
     handleClickFlatButton: Event => void,
@@ -16,7 +18,7 @@ type Props = {
     values: {
         test: string,
         modalOpen: boolean,
-        cards: [],
+        cards: Array<Cards>,
     }
 };
 
