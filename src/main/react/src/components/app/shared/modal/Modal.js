@@ -11,7 +11,16 @@ type State = {
     cancelText?: string,
 };
 
-class Modal extends Component<void, State> {
+type Props = {
+    title: string,
+    text: string,
+    modalOpen: boolean,
+    handleModalSubmit: Event => void,
+    submitText?: string,
+    cancelText?: string,
+};
+
+class Modal extends Component<Props, State> {
     constructor(props: any) {
         super(props);
 
@@ -23,7 +32,7 @@ class Modal extends Component<void, State> {
         this.handleModalSubmit = this.handleModalSubmit.bind(this);
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps: any) {
         if (this.props.modalOpen !== prevProps.modalOpen) {
             this.toggleModal();
         }

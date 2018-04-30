@@ -1,11 +1,13 @@
 // @flow
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Modal from '../shared/modal/Modal';
 import HomeView from './HomeView';
 
+type Cards = { id: number, title: string, text: string, imageColor: string };
 type State = {
     test: string,
-    modalOpen: string
+    modalOpen: boolean,
+    cards: Array<Cards>,
 };
 
 const initialState = {
@@ -68,7 +70,7 @@ class Home extends Component<void, State> {
         const { modalOpen } = this.state;
 
         return (
-            <React.Fragment>
+            <Fragment>
                 <HomeView
                     handleClickRaisedButton={this.handleClickRaisedButton}
                     handleClickFlatButton={this.handleClickFlatButton}
@@ -80,9 +82,9 @@ class Home extends Component<void, State> {
                     title="Modal title"
                     text="Modal text lorem ipsum etc etc"
                     handleModalSubmit={this.handleModalSubmit}
-                    submitText={'Add Card'}
+                    submitText="Add Card"
                 />
-            </React.Fragment>
+            </Fragment>
         );
     }
 }
