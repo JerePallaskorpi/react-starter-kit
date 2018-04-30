@@ -20,6 +20,7 @@ injectGlobal`
     font-family: 'Lato', Arial, sans-serif;
     font-size: 16px;
     background: ${styles.colorBackgroundLightGray};
+    color: ${styles.colorFontDark};
     
     input, select, textarea, button {
         font-family: inherit;

@@ -4,7 +4,7 @@ import React from 'react';
 import Button from '../../ui/elements/Button';
 import P from '../../ui/elements/P';
 import HomeView from './HomeView';
-import { ButtonWrapper, HomeContainer } from './styles';
+import { ButtonWrapper, HomeContainer, TextWrapper } from './styles';
 
 describe('<HomeView />', () => {
     const minProps = {
@@ -13,7 +13,14 @@ describe('<HomeView />', () => {
         handleClickFlatButton: () => {
         },
         values: {
-            test: '',
+            test: 'test text',
+            modalOpen: false,
+            cards: [
+                {
+                    title: 'card title',
+                    text: 'card text',
+                },
+            ],
         },
     };
 
@@ -31,11 +38,15 @@ describe('<HomeView />', () => {
         expect(wrapper.find(HomeContainer)).to.have.length(1);
     });
 
-    it('should render two (2) ButtonWrappers', () => {
-        expect(wrapper.find(ButtonWrapper)).to.have.length(2);
+    it('should render ButtonWrapper', () => {
+        expect(wrapper.find(ButtonWrapper)).to.have.length(1);
     });
 
-    it('should render four (4) <Button />', () => {
-        expect(wrapper.find(Button)).to.have.length(4);
+    it('should render TextWrapper', () => {
+        expect(wrapper.find(TextWrapper)).to.have.length(1);
+    });
+
+    it('should render four (5) <Button />', () => {
+        expect(wrapper.find(Button)).to.have.length(5);
     });
 });

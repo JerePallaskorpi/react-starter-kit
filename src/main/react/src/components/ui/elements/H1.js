@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
-import * as styles from '../defaultStyles';
 
 const H1 = styled.h1`
-    font-size: 24px;
-    color: ${styles.colorFontDark};
+    font-size: 18px;
     text-align: ${props => props.centered && 'center'};
+    color: ${props => props.color && props.color}
     
     ${props => props.secondary && css`
-        font-size: 18px;
+        font-size: 16px;
     `}
 `;
 
