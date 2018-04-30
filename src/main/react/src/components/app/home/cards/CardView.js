@@ -5,7 +5,11 @@ import Card from '../../../ui/blocks/Card';
 type Props = {
     title: string,
     text: string,
-    imageColor: string,
+    imageColor?: string,
+};
+
+const defaultProps = {
+    imageColor: 'purple',
 };
 
 const CardView = ({ title, text, imageColor }: Props) => (
@@ -19,5 +23,7 @@ const CardView = ({ title, text, imageColor }: Props) => (
         </Card.Content>
     </Card>
 );
+
+CardView.defaultProps = defaultProps;
 
 export default CardView;

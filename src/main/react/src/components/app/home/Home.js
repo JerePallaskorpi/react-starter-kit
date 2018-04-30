@@ -3,10 +3,10 @@ import React, { Component, Fragment } from 'react';
 import Modal from '../shared/modal/Modal';
 import HomeView from './HomeView';
 
-type Cards = [{id: number, title: string, text: string, imageColor?: string}]
+type Cards = {id: number, title: string, text: string, imageColor?: string};
 type State = {
     test: string,
-    modalOpen: string,
+    modalOpen: boolean,
     cards: Array<Cards>,
 };
 
