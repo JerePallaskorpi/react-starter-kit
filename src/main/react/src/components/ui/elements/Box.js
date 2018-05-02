@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as styles from '../defaultStyles';
 
-const Box = styled.div`
+export const Box = styled.div`
     padding: ${styles.paddingDefault};
     margin: ${styles.paddingDefault} 0;
     background: ${styles.colorBackgroundWhite};
@@ -11,5 +11,3 @@ const Box = styled.div`
     border-radius: 2px;
     border: none;
 `;
-
-export default Box;

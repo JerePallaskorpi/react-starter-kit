@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const H1 = styled.h1`
+export const H1 = styled.h1`
     font-size: 18px;
     text-align: ${props => props.centered && 'center'};
     color: ${props => props.color && props.color}
@@ -9,6 +9,3 @@ const H1 = styled.h1`
         font-size: 16px;
     `}
 `;
-
-export default H1;
-

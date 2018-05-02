@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import P from '../../elements/P';
+import { P } from '../../elements';
 
 const Text = styled(P)`
     text-align: right;

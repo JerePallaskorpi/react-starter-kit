@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as styles from '../defaultStyles';
 
-const P = styled.p`
+export const P = styled.p`
     font-size: 16px;
     
     ${props => props.secondary && css`
@@ -9,5 +9,3 @@ const P = styled.p`
         color: ${styles.colorFontDarkSecondary};
     `}
 `;
-
-export default P;
