@@ -2,13 +2,15 @@
 import React, { Component } from 'react';
 import FooterView from './FooterView';
 
-type Props = { /* ... */ };
+type Props = {
+    /* ... */
+};
 
 type State = {
     values: {
         linkText: string,
-    }
-}
+    },
+};
 
 const initialState = {
     values: {

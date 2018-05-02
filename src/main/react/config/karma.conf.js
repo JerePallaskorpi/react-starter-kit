@@ -1,11 +1,11 @@
-const path = require('path');
+import path from 'path';
 
 const testHelperPath = path.resolve('config/testHelper.js');
 
 process.env.BABEL_ENV = 'components';
 process.env.NODE_ENV = 'components';
 
-module.exports = function (config) {
+module.exports = (config) => {
     config.set({
         // use the Chrome browser
         browsers: ['Chrome'],
@@ -43,11 +43,7 @@ module.exports = function (config) {
                 // use same loaders as Create React App
                 loaders: [
                     {
-                        exclude: [
-                            /\.(js|jsx)$/,
-                            /\.css$/,
-                            /\.json$/,
-                        ],
+                        exclude: [/\.(js|jsx)$/, /\.css$/, /\.json$/],
                         loader: 'file-loader',
                         query: {
                             name: 'static/media/[name].[hash:8].[ext]',
@@ -58,7 +54,13 @@ module.exports = function (config) {
                         exclude: /node_modules/,
                         loader: 'babel-loader',
                         query: {
-                            presets: ['env', 'react', 'airbnb', 'es2015', 'stage-2'],
+                            presets: [
+                                'env',
+                                'react',
+                                'airbnb',
+                                'es2015',
+                                'stage-2',
+                            ],
                         },
                     },
                     {
@@ -73,10 +75,7 @@ module.exports = function (config) {
             },
             // relative path starts out at the src folder when importing modules
             resolve: {
-                modules: [
-                    path.join(__dirname, 'src'),
-                    'node_modules',
-                ],
+                modules: [path.join(__dirname, 'src'), 'node_modules'],
             },
         },
 

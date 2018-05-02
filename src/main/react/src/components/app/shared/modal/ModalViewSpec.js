@@ -10,8 +10,7 @@ describe('<ModalView />', () => {
         title: 'Title',
         text: 'Content text',
         modalOpen: false,
-        handleModalSubmit: () => {
-        },
+        handleModalSubmit: () => {},
         submitText: 'Submit',
         cancelText: 'Cancel',
     };

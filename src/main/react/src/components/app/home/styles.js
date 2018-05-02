@@ -15,19 +15,19 @@ export const ButtonWrapper = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    
+
     button {
         flex: 1;
         align-self: stretch;
     }
-    
+
     h1 {
         flex: 2;
     }
-    
+
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         flex-direction: column;
-        
+
         h1 {
             display: none;
         }

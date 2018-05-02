@@ -3,7 +3,7 @@ import * as styles from '../../../ui/defaultStyles';
 
 export const Wrapper = styled.div`
     padding: 0 1em;
-    
+
     @media only screen and (max-width: 600px) {
         display: none;
     }
@@ -19,7 +19,7 @@ export const NavLinks = styled.ul`
 export const Link = styled.li`
     border-bottom: 3px solid ${styles.colorBackgroundWhite};
     margin: 0 16px;
-    
+
     &:hover {
         cursor: pointer;
         border-bottom: 3px solid ${styles.colorMain};

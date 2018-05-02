@@ -7,10 +7,8 @@ import { ButtonWrapper, HomeContainer, TextWrapper } from './styles';
 
 describe('<HomeView />', () => {
     const minProps = {
-        handleClickRaisedButton: () => {
-        },
-        handleClickFlatButton: () => {
-        },
+        handleClickRaisedButton: () => {},
+        handleClickFlatButton: () => {},
         values: {
             test: 'test text',
             modalOpen: false,

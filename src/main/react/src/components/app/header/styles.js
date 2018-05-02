@@ -3,8 +3,8 @@ import * as styles from '../../ui/defaultStyles';
 
 export const Container = styled.div`
     width: 100%;
-    -webkit-box-shadow: ${styles.shadowDefault}; 
-    -moz-box-shadow: ${styles.shadowDefault}; 
+    -webkit-box-shadow: ${styles.shadowDefault};
+    -moz-box-shadow: ${styles.shadowDefault};
     box-shadow: ${styles.shadowDefault};
     display: flex;
     justify-content: space-between;
@@ -15,21 +15,19 @@ export const Container = styled.div`
     z-index: 1;
     background: ${styles.colorBackgroundWhite};
     max-height: 75px;
-    
+
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         text-align: center;
     }
-    
 `;
 
 export const Heading = styled.span`
     font-size: 2em;
     text-transform: capitalize;
-    
+
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         padding: unset;
     }
-    
 `;
 
 export const IconLogo = styled.i`

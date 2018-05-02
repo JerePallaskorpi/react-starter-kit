@@ -5,13 +5,11 @@ import * as styles from '../ui/defaultStyles';
 import Home from './home/Home';
 
 const App = () => (
-
     <Router>
         <Switch>
             <Route path="/" component={Home} />
         </Switch>
     </Router>
-
 );
 
 injectGlobal`

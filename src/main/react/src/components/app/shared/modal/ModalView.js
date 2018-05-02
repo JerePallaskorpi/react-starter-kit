@@ -40,7 +40,9 @@ const ModalView = ({
         </Modal.Content>
         <Modal.Footer>
             <Button onClick={handleModalSubmit}>{submitText}</Button>
-            <Button flat onClick={toggleModal}>{cancelText}</Button>
+            <Button flat onClick={toggleModal}>
+                {cancelText}
+            </Button>
         </Modal.Footer>
     </Modal>
 );

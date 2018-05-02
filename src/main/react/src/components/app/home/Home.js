@@ -3,7 +3,13 @@ import React, { Component, Fragment } from 'react';
 import Modal from '../shared/modal/Modal';
 import HomeView from './HomeView';
 
-type Cards = {id: number, title: string, text: string, imageColor?: string};
+type Cards = {
+    id: number,
+    title: string,
+    text: string,
+    imageColor?: string,
+};
+
 type State = {
     test: string,
     modalOpen: boolean,
@@ -63,7 +69,9 @@ class Home extends Component<void, State> {
     handleModalSubmit = () => {
         const { cards } = this.state;
 
-        this.setState({ cards: [...cards, { ...cards[0], id: cards.length + 1 }] });
+        this.setState({
+            cards: [...cards, { ...cards[0], id: cards.length + 1 }],
+        });
     };
 
     render() {
