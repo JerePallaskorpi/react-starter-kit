@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
 import Modal from '../../../ui/blocks/Modal';
-import Button from '../../../ui/elements/Button';
-import H1 from '../../../ui/elements/H1';
-import P from '../../../ui/elements/P';
+import { Button, H1, P } from '../../../ui/elements';
 
 type Props = {
     title: string,

@@ -1,9 +1,6 @@
 // @flow
 import React, { Fragment } from 'react';
-import Box from '../../ui/elements/Box';
-import Button from '../../ui/elements/Button';
-import H1 from '../../ui/elements/H1';
-import P from '../../ui/elements/P';
+import { Box, Button, H1, P } from '../../ui/elements';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import CardView from './cards/CardView';

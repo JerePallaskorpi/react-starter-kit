@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as styles from '../defaultStyles';
 
-const Button = styled.button`
+export const Button = styled.button`
     //font-family: 'Lato', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -62,5 +62,3 @@ const Button = styled.button`
         outline: none;
     }  
 `;
-
-export default Button;

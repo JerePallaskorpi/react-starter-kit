@@ -1,4 +1,4 @@
-## React Starter Kit Example v0.2
+## React Starter Kit Example v0.25
 This is an example create-react-app project that includes styled-components, unit tests, flow and a modified folder structure.
 
 ### Installation

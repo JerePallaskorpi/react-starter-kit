@@ -18,11 +18,11 @@ describe('<FooterView />', () => {
         expect(wrapper.exists()).to.be.true;
     });
 
-    it('should render OrangeBox', () => {
+    it('should render FooterContainer', () => {
         expect(wrapper.find(FooterContainer)).to.have.length(1);
     });
 
-    it('should render Container', () => {
+    it('should render FooterContent', () => {
         expect(wrapper.find(FooterContent)).to.have.length(3);
     });
 });

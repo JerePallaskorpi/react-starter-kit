@@ -43,8 +43,10 @@ class Modal extends Component<Props, State> {
     };
 
     handleSubmit = () => {
+        const { handleModalSubmit } = this.state;
+
         this.toggleModal();
-        this.state.handleModalSubmit();
+        handleModalSubmit();
     };
 
     render() {

@@ -1,8 +1,7 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Button from '../../ui/elements/Button';
-import P from '../../ui/elements/P';
+import { Button, P } from '../../ui/elements';
 import HomeView from './HomeView';
 import { ButtonWrapper, HomeContainer, TextWrapper } from './styles';
 

@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import H1 from '../../ui/elements/H1';
+import { H1 } from '../../ui/elements';
 import { FooterContainer, FooterContent } from './styles';
 
 type Props = {
