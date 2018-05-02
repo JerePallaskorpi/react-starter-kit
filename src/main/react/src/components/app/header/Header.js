@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react';
-import NavBar from './nav-bar/NavBar';
+import NavBar from './nav-bar/NavBarView';
 import { Container, Heading, IconLogo, OrangeBox } from './styles';
 
 function Header() {
@@ -8,7 +8,9 @@ function Header() {
         <Fragment>
             <OrangeBox />
             <Container>
-                <Heading><IconLogo className="fab fa-cloudsmith" />R Styled</Heading>
+                <Heading>
+                    <IconLogo className="fab fa-cloudsmith" />React Example
+                </Heading>
                 <NavBar />
             </Container>
         </Fragment>
