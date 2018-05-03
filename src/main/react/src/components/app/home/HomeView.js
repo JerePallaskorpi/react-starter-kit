@@ -4,7 +4,7 @@ import { Box, Button, H1, P } from '../../ui/elements';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import CardView from './cards/CardView';
-import { ButtonWrapper, CardWrapper, HomeContainer, TextWrapper } from './styles';
+import { ButtonWrapper, CardWrapper, Wrapper, TextWrapper } from './styles';
 
 type Cards = { id: number, title: string, text: string, imageColor?: string };
 
@@ -12,6 +12,9 @@ type Props = {
     handleClickRaisedButton: Event => void,
     handleClickFlatButton: Event => void,
     toggleModal: Event => void,
+    modalCount: {
+        count: number,
+    },
     values: {
         test: string,
         modalOpen: boolean,
@@ -24,12 +27,14 @@ const HomeView = ({
     handleClickFlatButton,
     values,
     toggleModal,
+    modalCount,
 }: Props) => (
     <Fragment>
         <Header />
-        <HomeContainer>
+        <Wrapper>
             <H1 centered>Styled Elements</H1>
             <Box>
+                <H1 centered>Modal submits: {modalCount.count} (redux)</H1>
                 <ButtonWrapper>
                     <Button onClick={handleClickRaisedButton}>Add</Button>
                     <Button flat onClick={handleClickFlatButton}>
@@ -50,7 +55,7 @@ const HomeView = ({
             <CardWrapper>
                 {values.cards.map(c => <CardView key={c.id} {...c} />)}
             </CardWrapper>
-        </HomeContainer>
+        </Wrapper>
         <Footer />
     </Fragment>
 );

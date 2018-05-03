@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as styles from '../../ui/defaultStyles';
 
-export const HomeContainer = styled.div`
+export const Wrapper = styled.div`
     max-width: 800px;
     margin: 0 auto;
     justify-content: flex-start;

@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 
 const testHelperPath = path.resolve('config/testHelper.js');
 

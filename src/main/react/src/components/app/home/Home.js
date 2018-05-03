@@ -1,6 +1,6 @@
 // @flow
 import React, { Component, Fragment } from 'react';
-import Modal from '../shared/modal/Modal';
+import ModalContainer from '../../../containers/ModalContainer';
 import HomeView from './HomeView';
 
 type Cards = {
@@ -15,6 +15,12 @@ type State = {
     modalOpen: boolean,
     cards: Array<Cards>,
 };
+
+type Props = {
+    modalCount: {
+        count: number,
+    },
+}
 
 const initialState = {
     test: 'test string',
@@ -40,7 +46,7 @@ const initialState = {
     ],
 };
 
-class Home extends Component<void, State> {
+class Home extends Component<Props, State> {
     constructor(props: any) {
         super(props);
 
@@ -76,6 +82,7 @@ class Home extends Component<void, State> {
 
     render() {
         const { modalOpen } = this.state;
+        const { modalCount } = this.props;
 
         return (
             <Fragment>
@@ -84,8 +91,9 @@ class Home extends Component<void, State> {
                     handleClickFlatButton={this.handleClickFlatButton}
                     toggleModal={this.toggleModal}
                     values={this.state}
+                    modalCount={modalCount}
                 />
-                <Modal
+                <ModalContainer
                     modalOpen={modalOpen}
                     title="Modal title"
                     text="Modal text lorem ipsum etc etc"
