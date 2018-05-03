@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import FooterView from './FooterView';
-import { FooterContainer, FooterContent } from './styles';
+import FooterView from '../FooterView';
+import { FooterContainer, FooterContent } from '../styles';
 
 describe('<FooterView />', () => {
     const minProps = {

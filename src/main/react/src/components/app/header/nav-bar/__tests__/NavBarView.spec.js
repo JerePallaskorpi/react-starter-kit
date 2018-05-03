@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import NavBar from './NavBarView';
-import { Link, NavLinks, Wrapper } from './styles';
+import NavBar from '../NavBarView';
+import { Link, NavLinks, Wrapper } from '../styles';
 
 describe('<NavBar />', () => {
     const wrapper = shallow(<NavBar />);

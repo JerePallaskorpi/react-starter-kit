@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Modal from './Modal';
+import Modal from '../Modal';
 
 describe('<Modal />', () => {
     const minProps = {
