@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -5,7 +6,7 @@ import { injectGlobal } from 'styled-components';
 import HomeContainer from '../../containers/HomeContainer';
 import * as styles from '../ui/defaultStyles';
 
-const App = ({ store }) => (
+const App = ({ store }: any) => (
     <Provider store={store}>
         <Router>
             <Switch>
