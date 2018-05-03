@@ -1,20 +1,19 @@
 // @flow
-import React, { Fragment } from 'react';
-import NavBar from './nav-bar/NavBarView';
-import { Container, Heading, IconLogo, OrangeBox } from './styles';
+import React, { Component } from 'react';
+import HeaderView from './HeaderView';
 
-function Header() {
-    return (
-        <Fragment>
-            <OrangeBox />
-            <Container>
-                <Heading>
-                    <IconLogo className="fab fa-cloudsmith" />React Example
-                </Heading>
-                <NavBar />
-            </Container>
-        </Fragment>
-    );
+type Props = {
+    modalCount: {
+        count: number,
+    },
+};
+
+class Header extends Component<Props, void> {
+    render() {
+        const { modalCount } = this.props;
+
+        return <HeaderView modalCount={modalCount} />;
+    }
 }
 
 export default Header;

@@ -1,19 +1,21 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Modal from '../../../ui/blocks/Modal';
-import { Button, P, H1 } from '../../../ui/elements';
-import ModalView from './ModalView';
+import Modal from '../../../../ui/blocks/Modal/index';
+import { Button, P, H1 } from '../../../../ui/elements/index';
+import ModalView from '../ModalView';
 
 describe('<ModalView />', () => {
     const minProps = {
         title: 'Title',
         text: 'Content text',
         modalOpen: false,
-        handleModalSubmit: () => {
-        },
+        handleModalSubmit: () => {},
         submitText: 'Submit',
         cancelText: 'Cancel',
+        modalCount: {
+            count: 0,
+        },
     };
 
     const wrapper = shallow(<ModalView {...minProps} />);

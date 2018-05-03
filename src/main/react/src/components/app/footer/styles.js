@@ -37,7 +37,7 @@ export const FooterContent = styled.div`
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    
+
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         margin: ${styles.paddingDefault};
     }

@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 import ModalView from './ModalView';
 
 type State = {
-    title: string,
-    text: string,
     modalOpen: boolean,
-    handleModalSubmit: (arg: any) => void,
-    submitText?: string,
-    cancelText?: string,
 };
 
 type Props = {
     title: string,
     text: string,
     modalOpen: boolean,
-    handleModalSubmit: Event => void,
+    handleModalSubmit: (arg: any) => void,
+    addToCount: (arg: any) => void,
     submitText?: string,
     cancelText?: string,
+    modalCount: {
+        count: number,
+    }
 };
 
 class Modal extends Component<Props, State> {
@@ -25,7 +24,7 @@ class Modal extends Component<Props, State> {
         super(props);
 
         this.state = {
-            ...this.props,
+            modalOpen: false,
         };
 
         this.toggleModal = this.toggleModal.bind(this);
@@ -43,20 +42,20 @@ class Modal extends Component<Props, State> {
     };
 
     handleSubmit = () => {
-        const { handleModalSubmit } = this.state;
-
         this.toggleModal();
-        handleModalSubmit();
+        this.props.handleModalSubmit();
+        this.props.addToCount();
     };
 
     render() {
         const {
             title,
             text,
-            modalOpen,
             submitText,
             cancelText,
-        } = this.state;
+            modalCount,
+        } = this.props;
+        const { modalOpen } = this.state;
 
         return (
             <ModalView
@@ -67,6 +66,7 @@ class Modal extends Component<Props, State> {
                 handleModalSubmit={this.handleSubmit}
                 submitText={submitText}
                 cancelText={cancelText}
+                modalCount={modalCount}
             />
         );
     }

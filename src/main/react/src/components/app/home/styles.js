@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as styles from '../../ui/defaultStyles';
 
-export const HomeContainer = styled.div`
+export const Wrapper = styled.div`
     max-width: 800px;
     margin: 0 auto;
     justify-content: flex-start;
@@ -15,19 +15,19 @@ export const ButtonWrapper = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    
+
     button {
         flex: 1;
         align-self: stretch;
     }
-    
+
     h1 {
         flex: 2;
     }
-    
+
     @media only screen and (max-width: ${styles.sizeScreenSmall}) {
         flex-direction: column;
-        
+
         h1 {
             display: none;
         }
