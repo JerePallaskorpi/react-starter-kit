@@ -13,6 +13,9 @@ describe('<ModalView />', () => {
         handleModalSubmit: () => {},
         submitText: 'Submit',
         cancelText: 'Cancel',
+        modalCount: {
+            count: 0,
+        },
     };
 
     const wrapper = shallow(<ModalView {...minProps} />);

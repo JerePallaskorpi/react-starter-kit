@@ -11,6 +11,9 @@ type Props = {
     handleModalSubmit: Event => void,
     submitText?: string,
     cancelText?: string,
+    modalCount: {
+        count: number,
+    }
 };
 
 const defaultProps = {
@@ -26,11 +29,12 @@ const ModalView = ({
     handleModalSubmit,
     submitText,
     cancelText,
+    modalCount,
 }: Props) => (
     <Modal modalOpen={modalOpen}>
         <Modal.Blur />
         <Modal.Header>
-            <H1 secondary>{title}</H1>
+            <H1 secondary>{modalCount.count} {title}</H1>
             <button onClick={toggleModal}>
                 <i className="fas fa-times" />
             </button>

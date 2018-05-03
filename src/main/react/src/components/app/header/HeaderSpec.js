@@ -2,29 +2,22 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
 import Header from './Header';
-
-import { Container, Heading, IconLogo, OrangeBox } from './styles';
+import HeaderView from './HeaderView';
 
 describe('<Header />', () => {
-    const wrapper = shallow(<Header />);
+    const minProps = {
+        modalCount: {
+            count: 0,
+        },
+    };
+
+    const wrapper = shallow(<Header {...minProps} />);
 
     it('renders <Header />', () => {
         expect(wrapper.exists()).to.be.true;
     });
 
-    it('should render OrangeBox', () => {
-        expect(wrapper.find(OrangeBox)).to.have.length(1);
-    });
-
-    it('should render Container', () => {
-        expect(wrapper.find(Container)).to.have.length(1);
-    });
-
-    it('should render IconLogo', () => {
-        expect(wrapper.find(IconLogo)).to.have.length(1);
-    });
-
-    it('should render Heading', () => {
-        expect(wrapper.find(Heading)).to.have.length(1);
+    it('should render HeaderView', () => {
+        expect(wrapper.find(HeaderView)).to.have.length(1);
     });
 });
