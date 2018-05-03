@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { Button, P } from '../../ui/elements';
-import HomeView from './HomeView';
-import { ButtonWrapper, Wrapper, TextWrapper } from './styles';
+import { Button, P } from '../../../ui/elements/index';
+import HomeView from '../HomeView';
+import { ButtonWrapper, Wrapper, TextWrapper } from '../styles';
 
 describe('<HomeView />', () => {
     const minProps = {

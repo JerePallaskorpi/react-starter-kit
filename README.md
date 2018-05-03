@@ -25,12 +25,12 @@ Follows Airbnb JavaScript style guide (https://github.com/airbnb/javascript) wit
 components/\
 ├── app/\
 │ ├── App.js\
-│ ├── AppSpec.js\
+│ ├── App.spec.js\
 │ └── header/\
 │ │├── Header.js\
-│ │├── HeaderSpec.js\
+│ │├── Header.spec.js\
 │ │├── HeaderView.js\
-│ │├── HeaderViewSpec.js\
+│ │├── HeaderView.spec.js\
 │ │├── styles.js\
 │ │└── navbar/\
 │ ││├── Navbar.js\

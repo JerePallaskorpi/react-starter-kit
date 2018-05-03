@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import HeaderView from './HeaderView';
+import HeaderView from '../HeaderView';
 
-import { Container, Heading, IconLogo, OrangeBox } from './styles';
+import { Container, Heading, IconLogo, OrangeBox } from '../styles';
 
 describe('<HeaderView />', () => {
     const minProps = {

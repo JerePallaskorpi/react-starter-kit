@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Card from '../../../ui/blocks/Card';
-import CardView from './CardView';
+import Card from '../../../../ui/blocks/Card/index';
+import CardView from '../CardView';
 
 describe('<CardView />', () => {
     const minProps = {
