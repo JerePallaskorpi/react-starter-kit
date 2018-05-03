@@ -7,10 +7,7 @@ const modalClicks = (state = initialState, action) => {
     switch (action.type) {
         case 'INCREMENT_COUNT':
             newState.count += 1;
-            return newState;
-        case 'DECREMENT_COUNT':
-            newState.count -= 1;
-            return newState;
+            return {...state, newState};
         default:
             return state;
     }

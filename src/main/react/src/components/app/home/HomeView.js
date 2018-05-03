@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import { Box, Button, H1, P } from '../../ui/elements';
 import Footer from '../footer/Footer';
-import Header from '../header/Header';
+import HeaderContainer from '../header/HeaderContainer';
 import CardView from './cards/CardView';
 import { ButtonWrapper, CardWrapper, Wrapper, TextWrapper } from './styles';
 
@@ -30,7 +30,7 @@ const HomeView = ({
     modalCount,
 }: Props) => (
     <Fragment>
-        <Header />
+        <HeaderContainer />
         <Wrapper>
             <H1 centered>Styled Elements</H1>
             <Box>

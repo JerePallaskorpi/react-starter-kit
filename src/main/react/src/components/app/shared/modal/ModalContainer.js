@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { addToCount } from '../actions';
-import Modal from '../components/app/shared/modal/Modal';
+import { addToCount } from '../../../../actions/index';
+import Modal from './Modal';
 
 const mapStateToProps = state => ({
     modalCount: state.modalClicks,

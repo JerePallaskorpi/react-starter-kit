@@ -1,6 +1,6 @@
 // @flow
 import React, { Component, Fragment } from 'react';
-import ModalContainer from '../../../containers/ModalContainer';
+import ModalContainer from '../shared/modal/ModalContainer';
 import HomeView from './HomeView';
 
 type Cards = {

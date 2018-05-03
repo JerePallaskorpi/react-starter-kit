@@ -3,8 +3,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
-import HomeContainer from '../../containers/HomeContainer';
 import * as styles from '../ui/defaultStyles';
+import HomeContainer from './home/HomeContainer';
 
 const App = ({ store }: any) => (
     <Provider store={store}>

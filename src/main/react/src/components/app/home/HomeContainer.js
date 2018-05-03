@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Home from '../components/app/home/Home';
+import Home from './Home';
 
 const mapStateToProps = state => ({
     modalCount: state.modalClicks,
