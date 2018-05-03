@@ -9,6 +9,7 @@ describe('<Modal />', () => {
         text: 'Content text',
         modalOpen: false,
         handleModalSubmit: () => {},
+        addToCount: () => {},
         submitText: 'Submit',
         cancelText: 'Cancel',
     };

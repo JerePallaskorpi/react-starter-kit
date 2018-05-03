@@ -3,12 +3,15 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { Button, P } from '../../ui/elements';
 import HomeView from './HomeView';
-import { ButtonWrapper, HomeContainer, TextWrapper } from './styles';
+import { ButtonWrapper, Wrapper, TextWrapper } from './styles';
 
 describe('<HomeView />', () => {
     const minProps = {
         handleClickRaisedButton: () => {},
         handleClickFlatButton: () => {},
+        modalCount: {
+            count: 0,
+        },
         values: {
             test: 'test text',
             modalOpen: false,
@@ -31,8 +34,8 @@ describe('<HomeView />', () => {
         expect(wrapper.find(P)).to.have.length(2);
     });
 
-    it('should render HomeContainer', () => {
-        expect(wrapper.find(HomeContainer)).to.have.length(1);
+    it('should render Wrapper', () => {
+        expect(wrapper.find(Wrapper)).to.have.length(1);
     });
 
     it('should render ButtonWrapper', () => {
