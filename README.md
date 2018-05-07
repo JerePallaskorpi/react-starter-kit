@@ -1,5 +1,5 @@
-## React Starter Kit Example v0.25
-This is an example create-react-app project that includes styled-components, unit tests, flow and a modified folder structure.
+## React Starter Kit Example v0.3
+This is an example [Create React App](https://github.com/facebook/create-react-app) project that includes redux, styled-components, unit tests, flow and a modified folder structure.
 
 ### Installation
 1. Clone the project
@@ -20,24 +20,18 @@ OR
 ### ESLint Settings
 Follows Airbnb JavaScript style guide (https://github.com/airbnb/javascript) with some custom rules.
 
-
 ### Folder Structure Example
 components/\
 ├── app/\
-│ ├── App.js\
-│ ├── App.spec.js\
 │ └── header/\
+│ │├── \_\_tests\_\_/\
+│ ││├── Header.spec.js\
+│ ││└── HeaderView.spec.js\
 │ │├── Header.js\
-│ │├── Header.spec.js\
+│ │├── HeaderContainer.js\
 │ │├── HeaderView.js\
-│ │├── HeaderView.spec.js\
 │ │├── styles.js\
 │ │└── navbar/\
-│ ││├── Navbar.js\
-│ ││├── NavbarSpec.js\
-│ ││├── NavbarView.js\
-│ ││├── NavbarViewSpec.js\
-│ ││└── styles.js\
 ├── ui/\
 │ ├── blocks/\
 │ ││└── Modal/\
@@ -48,10 +42,14 @@ components/\
 │ └── elements/\
 │ ││└── Button.js\
 utils/\
+actions/\
+reducers/\
+store/\
 config/
 
 ### Installed packages
 
+- Redux
 - Styled Components
 - Flow
 - ESLint
