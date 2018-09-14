@@ -3,9 +3,11 @@ import * as styles from '../../defaultStyles';
 
 const Header = styled.div`
     position: relative;
-    padding: ${styles.paddingDefault};
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
+    background: #FFFFFF;
+    border-top: 6px solid ${styles.colorMain};
     
     button {
         background: none;

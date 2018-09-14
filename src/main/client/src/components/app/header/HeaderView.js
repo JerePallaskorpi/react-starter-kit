@@ -1,23 +1,14 @@
 // @flow
 import React, { Fragment } from 'react';
-import NavBar from './nav-bar/NavBarView';
 import { OrangeBox, Container, Heading, IconLogo } from './styles';
 
-type Props = {
-    modalCount: {
-        count: number,
-    },
-};
-
-const HeaderView = ({ modalCount }: Props) => (
+const HeaderView = () => (
     <Fragment>
         <OrangeBox />
         <Container>
             <Heading>
-                <IconLogo className="fab fa-cloudsmith" />React Example{' '}
-                {modalCount.count}
+                <IconLogo className="fab fa-cloudsmith" />React, Redux & Styled{' '}
             </Heading>
-            <NavBar />
         </Container>
     </Fragment>
 );

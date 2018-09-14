@@ -1,74 +1,81 @@
 // @flow
 import React, { Component } from 'react';
+import { createPortal } from 'react-dom';
 import ModalView from './ModalView';
 
-type State = {
-    modalOpen: boolean,
-};
+const modalRoot: any = document.getElementById('modal-root');
 
 type Props = {
     title: string,
-    text: string,
-    modalOpen: boolean,
-    handleModalSubmit: (arg: any) => void,
-    addToCount: (arg: any) => void,
-    submitText?: string,
-    cancelText?: string,
-    modalCount: {
-        count: number,
-    }
+    submitText: string,
+    cancelText: string,
+    children: any,
+    handleModalSubmit: Function,
+    handleModalCancel?: Function,
+    activeModal: string,
+    setActiveModal: (modal: string) => void,
+    submitDisabled: boolean,
 };
 
-class Modal extends Component<Props, State> {
+class Modal extends Component<Props> {
+    static defaultProps = {
+        submitDisabled: false,
+        handleModalCancel: undefined,
+    };
+
     constructor(props: any) {
         super(props);
 
-        this.state = {
-            modalOpen: false,
-        };
-
         this.toggleModal = this.toggleModal.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    componentDidUpdate(prevProps: any) {
-        if (this.props.modalOpen !== prevProps.modalOpen) {
-            this.toggleModal();
-        }
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     toggleModal = () => {
-        this.setState({ modalOpen: !this.state.modalOpen });
+        const { activeModal, setActiveModal } = this.props;
+
+        if (activeModal) setActiveModal('');
+    };
+
+    handleCancel = () => {
+        const { handleModalCancel } = this.props;
+        if (handleModalCancel) handleModalCancel();
+        this.toggleModal();
     };
 
     handleSubmit = () => {
+        const { handleModalSubmit } = this.props;
+
+        handleModalSubmit();
         this.toggleModal();
-        this.props.handleModalSubmit();
-        this.props.addToCount();
     };
 
     render() {
         const {
             title,
-            text,
             submitText,
             cancelText,
-            modalCount,
+            children,
+            activeModal,
+            submitDisabled,
         } = this.props;
-        const { modalOpen } = this.state;
 
-        return (
-            <ModalView
-                title={title}
-                text={text}
-                modalOpen={modalOpen}
-                toggleModal={this.toggleModal}
-                handleModalSubmit={this.handleSubmit}
-                submitText={submitText}
-                cancelText={cancelText}
-                modalCount={modalCount}
-            />
-        );
+        if (activeModal) {
+            return createPortal(
+                <ModalView
+                    content={children}
+                    title={title}
+                    submitText={submitText}
+                    cancelText={cancelText}
+                    handleModalSubmit={this.handleSubmit}
+                    submitDisabled={submitDisabled}
+                    handleModalCancel={this.handleCancel}
+                />,
+                modalRoot,
+            );
+        }
+
+        return null;
     }
 }
 

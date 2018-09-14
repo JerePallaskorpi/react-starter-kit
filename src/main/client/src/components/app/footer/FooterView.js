@@ -17,10 +17,6 @@ const FooterView = ({ test, values }: Props) => (
                 <li>
                     <H1 secondary>First</H1>
                 </li>
-                <li>Etc.</li>
-                <li>Etc.</li>
-                <li>Etc.</li>
-                <li>{test}</li>
             </ul>
         </FooterContent>
         <FooterContent>
@@ -28,10 +24,6 @@ const FooterView = ({ test, values }: Props) => (
                 <li>
                     <H1 secondary>Second</H1>
                 </li>
-                <li>Etc.</li>
-                <li>Etc.</li>
-                <li>Etc.</li>
-                <li>{values.linkText}</li>
             </ul>
         </FooterContent>
         <FooterContent>
@@ -39,8 +31,6 @@ const FooterView = ({ test, values }: Props) => (
                 <li>
                     <H1 secondary>Third</H1>
                 </li>
-                <li>Etc.</li>
-                <li>More stuff important</li>
             </ul>
         </FooterContent>
     </FooterContainer>

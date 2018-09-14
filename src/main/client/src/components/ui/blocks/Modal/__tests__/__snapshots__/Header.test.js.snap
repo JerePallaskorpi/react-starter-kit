@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> works 1`] = `
+.c0 {
+  position: relative;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-top: 6px solid #3DB7E4;
+}
+
+.c0 button {
+  background: none;
+  border: none;
+}
+
+.c0 button:hover {
+  cursor: pointer;
+}
+
+.c0 button:focus {
+  outline: none;
+}
+
+<div
+  className="c0"
+/>
+`;

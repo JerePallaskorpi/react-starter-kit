@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
-import { addToCount } from '../../../../actions/index';
+import { setActiveModal } from '../../../../reducers/modal/actions';
 import Modal from './Modal';
 
 const mapStateToProps = state => ({
-    modalCount: state.modalClicks,
+    activeModal: state.modal.activeModal,
 });
 
 const mapDispatchToProps = dispatch => ({
-    addToCount: () => {
-        dispatch(addToCount());
+    setActiveModal: (activeModal) => {
+        dispatch(setActiveModal(activeModal));
     },
 });
 

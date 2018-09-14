@@ -1,17 +1,26 @@
-import styled from 'styled-components';
-import * as styles from '../../defaultStyles';
+import styled, { css } from 'styled-components';
 
 const Footer = styled.div`
     display: flex;
     flex-direction: row-reverse;
     position: relative;
-    padding: ${styles.paddingDefault};
+    padding: 0.5rem 1rem;
+    background: #FFFFFF;
     
-    @media only screen and (max-width: ${styles.sizeScreenSmall}) {
+    button {
+        margin-left: 1em;
+    }
+    
+    ${props => props.hidden && css`
+        display: none;
+    `}
+    
+    @media only screen and (max-width: 768px) {
         flex-direction: column;
         
         button {
             align-self: stretch;
+            margin: 0.5rem 0;
         }
     }
 `;

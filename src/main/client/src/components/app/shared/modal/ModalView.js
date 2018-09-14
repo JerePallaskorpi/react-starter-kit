@@ -1,56 +1,47 @@
 // @flow
 import React from 'react';
-import Modal from '../../../ui/blocks/Modal';
-import { Button, H1, P } from '../../../ui/elements';
+import Modal from '../../../ui/blocks/Modal/index';
+import { Button, H1 } from '../../../ui/elements/index';
 
 type Props = {
+    handleModalCancel: Function,
+    handleModalSubmit: Function,
+    content: any,
     title: string,
-    text: string,
-    modalOpen: boolean,
-    toggleModal: Event => void,
-    handleModalSubmit: Event => void,
-    submitText?: string,
-    cancelText?: string,
-    modalCount: {
-        count: number,
-    }
-};
-
-const defaultProps = {
-    submitText: 'Submit',
-    cancelText: 'Cancel',
+    submitText: string,
+    cancelText: string,
+    submitDisabled: boolean,
 };
 
 const ModalView = ({
-    title,
-    text,
-    modalOpen,
-    toggleModal,
+    handleModalCancel,
     handleModalSubmit,
+    content,
+    title,
     submitText,
     cancelText,
-    modalCount,
+    submitDisabled,
 }: Props) => (
-    <Modal modalOpen={modalOpen}>
+    <Modal>
         <Modal.Blur />
         <Modal.Header>
-            <H1 secondary>{modalCount.count} {title}</H1>
-            <button onClick={toggleModal}>
+            <H1 secondary>{title}</H1>
+            <button onClick={handleModalCancel}>
                 <i className="fas fa-times" />
             </button>
         </Modal.Header>
         <Modal.Content>
-            <P>{text}</P>
+            {content}
         </Modal.Content>
-        <Modal.Footer>
-            <Button onClick={handleModalSubmit}>{submitText}</Button>
-            <Button flat onClick={toggleModal}>
+        <Modal.Footer hidden={!submitText}>
+            <Button disabled={submitDisabled} onClick={handleModalSubmit}>
+                {submitText}
+            </Button>
+            <Button flat onClick={handleModalCancel}>
                 {cancelText}
             </Button>
         </Modal.Footer>
     </Modal>
 );
-
-ModalView.defaultProps = defaultProps;
 
 export default ModalView;

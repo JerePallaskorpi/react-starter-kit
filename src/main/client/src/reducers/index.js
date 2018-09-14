@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import modalClicks from './modalClicks';
+import modal from './modal';
 
-const rootReducer = combineReducers({
-    modalClicks,
+export default combineReducers({
+    modal,
 });
-
-export default rootReducer;
