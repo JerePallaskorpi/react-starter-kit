@@ -1,4 +1,4 @@
-## React Starter Kit Example v0.3
+## React Starter Kit Example v1.0
 This is an example [Create React App](https://github.com/facebook/create-react-app) project that includes redux, styled-components, unit tests, flow and a modified folder structure.
 
 ### Installation
