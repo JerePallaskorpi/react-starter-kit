@@ -13,7 +13,7 @@ exports[`<Header /> works 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   background: #FFFFFF;
-  border-top: 6px solid #3DB7E4;
+  border-top: 6px solid #d12937;
 }
 
 .c0 button {

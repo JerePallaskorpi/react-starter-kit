@@ -1,6 +1,5 @@
 // @flow
 import React, { Component, Fragment } from 'react';
-import { setActiveModal } from '../../../reducers/modal/actions';
 import HomeView from './HomeView';
 
 type Props = {
