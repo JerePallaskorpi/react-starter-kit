@@ -30,7 +30,6 @@ const HomeView = ({
     modalCount,
 }: Props) => (
     <Fragment>
-        <HeaderContainer />
         <Wrapper>
             <H1 centered>Styled Elements</H1>
             <Box>
