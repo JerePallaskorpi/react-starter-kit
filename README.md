@@ -1,4 +1,4 @@
-## React Starter Kit Example v1.0
+## React Starter Kit Example v1.1
 This is an example [Create React App](https://github.com/facebook/create-react-app) project that includes redux, styled-components, unit tests, flow and a modified folder structure.
 
 ### Installation
@@ -7,10 +7,10 @@ This is an example [Create React App](https://github.com/facebook/create-react-a
 3. After install is done type 'npm start' and app will launch in localhost:3000
 
 #### Unit Tests (after install)
-1. Go to path \src\main\react in terminal and type 'npm test'
+1. Go to path \src\main\client in terminal and type 'npm test'
 
 #### Flow (after install)
-1. Go to path \src\main\react in terminal and type 'npm run flow'
+1. Go to path \src\main\client in terminal and type 'npm run flow'
 
 OR
 
@@ -25,8 +25,8 @@ components/\
 ├── app/\
 │ └── header/\
 │ │├── \_\_tests\_\_/\
-│ ││├── Header.spec.js\
-│ ││└── HeaderView.spec.js\
+│ ││├── Header.test.js\
+│ ││└── HeaderView.test.js\
 │ │├── Header.js\
 │ │├── HeaderContainer.js\
 │ │├── HeaderView.js\
@@ -51,9 +51,8 @@ config/
 
 - Redux
 - Styled Components
+- Jest / Enzyme
 - Flow
 - ESLint
-- Chai / Enzyme
 - Babel
 - React Router Dom
-- Karma
